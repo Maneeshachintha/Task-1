@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GigStream – Freelance Platform</title>
+
+<style>
+/* =============================
+   BASIC PAGE STYLE
+   ============================= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #b3e5fc, #ffffff);
+  color: #333;
+}
+
+/* Pseudo-elements */
+h2::first-letter {
+  color: orange;
+  font-size: 2em;
+  font-weight: bold;
+}
+p::first-line {
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* =============================
+   HEADER
+   ============================= */
+header {
+  background-color: teal;
+  color: white;
+  text-align: center;
+  padding: 2em 1em;
+  position: sticky; /* sticky example */
+  top: 0;
+  z-index: 10;
+}
+header h1 {
+  margin: 0;
+  text-shadow: 3px 2px black;
+}
+header p {
+  font-size: 1.2em;
+}
+
+/* =============================
+   NAVIGATION BAR
+   ============================= */
+nav {
+  background-color: #004d40;
+  text-align: center;
+  padding: 1em 0;
+  position: relative; /* relative example */
+  z-index: 5;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+nav a:hover {
+  background-color: orange;
+  color: black;
+}
+nav a:active {
+  background-color: #ff5722;
+  color: white;
+}
+nav a:visited {
+  color: #ccc;
+}
+
+/* =============================
+   SECTION STYLE
+   ============================= */
+section {
+  background-color: rgba(255, 255, 255, 0.95);
+  margin: 1.5em; /* shorthand margin: top right bottom left */
+  padding: 1.5em;
+  border-radius: 1em;
+  box-shadow: 5px 5px 10px gray;
+  position: relative;
+}
+h2 {
+  color: teal;
+  border-bottom: 2px solid teal;
+  padding-bottom: 0.5em;
+  font-size: 2em;
+}
+p {
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 1em;
+}
+
+/* Example list with list-style */
+ul {
+  list-style-type: square;
+  padding-left: 2em;
+}
+
+/* Float example */
+img.float-left {
+  float: left;
+  margin: 0 1em 1em 0;
+  width: 100px;
+  height: auto;
+}
+
+/* =============================
+   FORM STYLE
+   ============================= */
+form {
+  margin-top: 1em;
+}
+label {
+  font-weight: bold;
+}
+input, textarea {
+  width: 90%;
+  padding: 0.5em;
+  margin-top: 0.3em;
+  border: 1px solid #999;
+  border-radius: 0.5em;
+  font-size: 1em;
+}
+input:focus, textarea:focus {
+  border: 2px solid #2196f3;
+  background-color: #e3f2fd;
+  outline: none;
+  opacity: 0.9; /* opacity example */
+}
+input[type="submit"] {
+  background-color: teal;
+  color: white;
+  border: none;
+  padding: 0.7em 1.5em;
+  cursor: pointer;
+  font-size: 1em;
+}
+input[type="submit"]:hover {
+  background-color: orange;
+  color: black;
+}
+
+/* =============================
+   FOOTER
+   ============================= */
+footer {
+  text-align: center;
+  background-color: #004d40;
+  color: white;
+  padding: 1em 0;
+  margin-top: 2em;
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive text units using rem/vw/vh */
+h1 { font-size: 2.5rem; }
+p { font-size: 1rem; }
+label { font-size: 1rem; }
+</style>
+</head>
+
+<body>
+
+<!-- =============================
+     HEADER
+     ============================= -->
+<header>
+  <h1>GigStream Freelance Platform</h1>
+  <p>Your Stream of Freelance Opportunities</p>
+</header>
+
+<!-- =============================
+     NAVIGATION
+     ============================= -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- =============================
+     HOME SECTION
+     ============================= -->
+<section id="home">
+  <h2>Home</h2>
+  <p>Welcome to <strong>GigStream</strong> – a modern freelance platform designed to connect skilled professionals with clients around the world. 
+     Whether you are a designer, developer, writer, or marketer, GigStream provides a trusted space to showcase your talent and find meaningful work.</p>
+</section>
+
+<!-- =============================
+     ABOUT SECTION
+     ============================= -->
+<section id="about">
+  <h2>About Us</h2>
+  <p>At <strong>GigStream</strong>, we believe in empowering freelancers to achieve their full potential. Our goal is to create a community where creativity meets opportunity, helping both clients and professionals grow together.</p>
+
+</section>
+
+<!-- =============================
+     CONTACT SECTION
+     ============================= -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>We’d love to hear from you! Whether you have a question, suggestion, or collaboration idea, fill out the form below and our team will respond soon.</p>
+
+  <form>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required minlength="3" placeholder="Enter your name"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required placeholder="Enter your email"><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" required minlength="10" placeholder="Enter your message"></textarea><br><br>
+
+    <input type="submit" value="Send Message">
+  </form>
+</section>
+
+<!-- =============================
+     FOOTER
+     ============================= -->
+<footer>
+  <p>© 2025 GigStream Freelance Platform | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
