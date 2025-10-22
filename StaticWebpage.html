@@ -21,6 +21,7 @@ nav {
   padding: 12px 0;
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 nav a {
   color: white;
@@ -31,14 +32,16 @@ nav a {
 }
 nav a:hover { color: orange; }
 nav a:active { color: yellow; }
+nav a:visited { color: #ddd; }
 
-/* ===== SECTION STYLE ===== */
+/* ===== SECTIONS ===== */
 section {
   padding: 40px 20px;
   margin: 20px;
   background: rgba(255,255,255,0.9);
   border-radius: 10px;
   box-shadow: 3px 3px 8px gray;
+  position: relative;
 }
 h2::first-letter {
   color: orange;
@@ -48,26 +51,43 @@ p::first-line {
   font-weight: bold;
   font-style: italic;
 }
-h2 { color: teal; text-align: center; }
+h2 {
+  color: teal;
+  text-align: center;
+  text-shadow: 2px 1px lightgray;
+}
 
-/* ===== FORM STYLE ===== */
+/* ===== IMAGE FLOAT EXAMPLE ===== */
+img {
+  float: left;
+  width: 100px;
+  margin: 10px 15px 10px 0;
+  border-radius: 10px;
+}
+
+/* ===== FORM ===== */
 form {
   max-width: 350px;
   margin: 20px auto;
   text-align: left;
 }
-label { font-weight: bold; }
+label {
+  font-weight: bold;
+  font-size: 1rem;
+}
 input, textarea {
   width: 100%;
   padding: 8px;
   margin: 6px 0 12px 0;
   border: 1px solid #999;
   border-radius: 6px;
+  font-size: 1rem;
 }
 input:focus, textarea:focus {
   border: 2px solid teal;
   background: #e0f2f1;
   outline: none;
+  opacity: 0.9;
 }
 input[type="submit"] {
   background: teal;
@@ -110,23 +130,24 @@ footer {
 <!-- ===== HOME ===== -->
 <section id="home">
   <h2>Home</h2>
-  <p>Welcome to <b>GigStream</b> — your gateway to freelance success.  
-     Find projects, showcase your skills, and grow your career with ease.</p>
+  <img src="https://via.placeholder.com/100" alt="Freelance">
+  <p>Welcome to <b>GigStream</b> — your gateway to freelance success. 
+  Find projects, showcase your skills, and grow your career with ease.</p>
 </section>
 
 <!-- ===== ABOUT ===== -->
 <section id="about">
   <h2>About Us</h2>
-  <p><b>GigStream</b> connects clients with talented freelancers globally.  
-     We focus on transparency, trust, and growth for all professionals.</p>
+  <p><b>GigStream</b> connects clients with talented freelancers worldwide. 
+  We focus on trust, transparency, and growth for all professionals.</p>
 </section>
 
 <!-- ===== CONTACT ===== -->
 <section id="contact">
   <h2>Contact Us</h2>
-  <p>Have a question or idea? Fill in the form below and we’ll get back to you soon.</p>
+  <p>Have a question or idea? Fill out the form below and we’ll get back soon.</p>
 
-  <form onsubmit="return validateForm()">
+  <form>
     <label for="name">Name:</label>
     <input type="text" id="name" required minlength="3" placeholder="Enter your name">
 
@@ -144,21 +165,6 @@ footer {
 <footer>
   <p>© 2025 GigStream | All Rights Reserved</p>
 </footer>
-
-<!-- ===== SIMPLE VALIDATION ===== -->
-<script>
-function validateForm() {
-  let n = document.getElementById("name").value.trim();
-  let e = document.getElementById("email").value.trim();
-  let m = document.getElementById("message").value.trim();
-  if (!n || !e || !m) {
-    alert("Please fill in all fields!");
-    return false;
-  }
-  alert("Form submitted successfully!");
-  return true;
-}
-</script>
 
 </body>
 </html>
