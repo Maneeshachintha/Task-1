@@ -1,25 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Shapes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Shapes</title>
+
   <style>
-    body { text-align: center; font-family: Arial; margin: 40px; }
+   
+    /* ===== STAR ===== */
     .star {
-      background-color: red;
       width: 100px;
       height: 100px;
-      clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+      background: red;
+      clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 
+        68% 57%, 79% 91%, 50% 70%, 
+        21% 91%, 32% 57%, 2% 35%, 39% 35%
+      );
       display: inline-block;
       margin: 20px;
     }
+
+    /* ===== CIRCLE ===== */
     .circle {
-      background-color: green;
       width: 100px;
       height: 100px;
+      background: green;
       border-radius: 50%;
       display: inline-block;
       margin: 20px;
     }
+
+    /* ===== TRIANGLE ===== */
     .triangle {
       width: 0;
       height: 0;
@@ -31,7 +43,9 @@
     }
   </style>
 </head>
+
 <body>
+  <h2>CSS Shapes</h2>
   <div class="star"></div>
   <div class="circle"></div>
   <div class="triangle"></div>
