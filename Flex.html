@@ -1,152 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GigStream - Freelance Platform</title>
-<style>
-  /* ----------------------------
-     BASIC STYLES
-     ---------------------------- */
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GigStream – Freelance Platform</title>
 
-  /* ----------------------------
-     HEADER & FOOTER
-     ---------------------------- */
-  header, footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-
-  header h1 {
-    margin: 0;
-    font-size: 2em;
-  }
-
-  /* ----------------------------
-     NAVIGATION
-     ---------------------------- */
-  nav {
-    background-color: #555;
-    text-align: center;
-    padding: 15px;
-  }
-
-  nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  nav a:hover {
-    text-decoration: underline;
-  }
-
-  /* ----------------------------
-     FLEX LAYOUT
-     ---------------------------- */
-  .flex-container {
-    display: flex;       /* enables flex layout */
-    flex-wrap: wrap;     /* allows items to wrap on smaller screens */
-    gap: 20px;           /* space between items */
-    padding: 20px;
-  }
-
-  .sidebar {
-    background-color: #2a9d8f;
-    color: white;
-    flex: 1 1 200px;     /* flexible width with min 200px */
-    padding: 20px;
-    border-radius: 8px;
-    min-height: 300px;
-  }
-
-  .main-content {
-    background-color: #f4a261;
-    color: white;
-    flex: 3 1 500px;     /* grows more than sidebar */
-    padding: 20px;
-    border-radius: 8px;
-  }
-
-  .project {
-    background-color: #e76f51;
-    margin: 10px 0;
-    padding: 20px;
-    border-radius: 8px;
-  }
-
-  /* ----------------------------
-     RESPONSIVE STYLES
-     ---------------------------- */
-  @media (max-width: 900px) {
-    .flex-container { 
-      flex-direction: column; /* stack sidebar and main content */
+  <style>
+    /* ===== BASIC STYLE ===== */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
-    .sidebar, .main-content { 
-      flex: 1 1 100%; 
-      min-height: auto; 
-    }
-    nav a { margin: 10px 10px; }
-  }
 
-  @media (max-width: 600px) {
-    nav a { 
-      display: block;     /* vertical nav links on mobile */
-      margin: 5px 0; 
+    /* ===== HEADER & FOOTER ===== */
+    header, footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
     }
-  }
-</style>
+
+    header h1 { margin: 0; }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      background: #555;
+      text-align: center;
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== FLEX LAYOUT ===== */
+    .flex-container {
+      display: flex;        /* Enables flexbox layout */
+      flex-wrap: wrap;      /* Allows wrapping on smaller screens */
+      gap: 20px;            /* Space between boxes */
+      padding: 20px;
+    }
+
+    .sidebar {
+      background: #2a9d8f;
+      color: white;
+      flex: 1 1 200px;      /* Grows & shrinks with min width 200px */
+      padding: 20px;
+      border-radius: 8px;
+      min-height: 300px;
+    }
+
+    .main-content {
+      background: #f4a261;
+      color: white;
+      flex: 3 1 500px;      /* Larger area than sidebar */
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .project {
+      background: #e76f51;
+      margin: 10px 0;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 900px) {
+      .flex-container {
+        flex-direction: column;  /* Stack vertically */
+      }
+      .sidebar, .main-content {
+        flex: 1 1 100%;
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header>
-  <h1>GigStream - Freelance Platform</h1>
-</header>
+  <!-- HEADER -->
+  <header>
+    <h1>GigStream – Freelance Platform</h1>
+  </header>
 
-<!-- NAVIGATION -->
-<nav>
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Projects</a>
-  <a href="#">Contact</a>
-</nav>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </nav>
 
-<!-- FLEX CONTAINER -->
-<div class="flex-container">
-  <!-- SIDEBAR -->
-  <div class="sidebar">
-    <h2>About</h2>
-    <p>Freelance web developer with experience in HTML, CSS, and Flexbox.</p>
-    <h3>Skills</h3>
-    <ul>
-      <li>HTML & CSS</li>
-      <li>JavaScript</li>
-      <li>Responsive Design</li>
-    </ul>
+  <!-- FLEX CONTAINER -->
+  <div class="flex-container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h2>About</h2>
+      <p>Freelance web developer skilled in HTML, CSS, and Flexbox layouts.</p>
+      <h3>Skills</h3>
+      <ul>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>Responsive Design</li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <h2>My Projects</h2>
+      <div class="project">Project 1</div>
+      <div class="project">Project 2</div>
+      <div class="project">Project 3</div>
+    </div>
   </div>
 
-  <!-- MAIN CONTENT -->
-  <div class="main-content">
-    <h2>My Projects</h2>
-    <div class="project">Project 1</div>
-    <div class="project">Project 2</div>
-    <div class="project">Project 3</div>
-    <div class="project">Project 4</div>
-  </div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  &copy; 2025 Freelance Portfolio
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    © 2025 GigStream | All Rights Reserved
+  </footer>
 
 </body>
 </html>
