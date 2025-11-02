@@ -8,13 +8,13 @@
 <style>
 /* ===== BASIC STYLE ===== */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
+  font-family: Arial, sans-serif;
   background: linear-gradient(to right, #b2ebf2, #e0f7fa);
   color: #333;
 }
 
-/* ===== NAVIGATION BAR ===== */
+/* ===== NAVIGATION ===== */
 nav {
   background: teal;
   text-align: center;
@@ -28,7 +28,6 @@ nav a {
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
-  transition: 0.3s;
 }
 nav a:hover { color: orange; }
 nav a:active { color: yellow; }
@@ -43,6 +42,11 @@ section {
   box-shadow: 3px 3px 8px gray;
   position: relative;
 }
+h2 {
+  color: teal;
+  text-align: center;
+  text-shadow: 2px 1px lightgray;
+}
 h2::first-letter {
   color: orange;
   font-size: 1.5em;
@@ -51,43 +55,24 @@ p::first-line {
   font-weight: bold;
   font-style: italic;
 }
-h2 {
-  color: teal;
-  text-align: center;
-  text-shadow: 2px 1px lightgray;
-}
 
-/* ===== IMAGE FLOAT EXAMPLE ===== */
-img {
-  float: left;
-  width: 100px;
-  margin: 10px 15px 10px 0;
-  border-radius: 10px;
-}
-
-/* ===== FORM ===== */
+/* ===== CONTACT FORM ===== */
 form {
   max-width: 350px;
   margin: 20px auto;
-  text-align: left;
 }
-label {
-  font-weight: bold;
-  font-size: 1rem;
-}
+label { font-weight: bold; }
 input, textarea {
   width: 100%;
   padding: 8px;
-  margin: 6px 0 12px 0;
+  margin: 6px 0 12px;
   border: 1px solid #999;
   border-radius: 6px;
-  font-size: 1rem;
 }
 input:focus, textarea:focus {
   border: 2px solid teal;
   background: #e0f2f1;
   outline: none;
-  opacity: 0.9;
 }
 input[type="submit"] {
   background: teal;
@@ -120,29 +105,24 @@ footer {
 
 <body>
 
-<!-- ===== NAVIGATION ===== -->
 <nav>
   <a href="#home">Home</a>
   <a href="#about">About Us</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<!-- ===== HOME ===== -->
 <section id="home">
   <h2>Home</h2>
-  <img src="https://via.placeholder.com/100" alt="Freelance">
-  <p>Welcome to <b>GigStream</b> — your gateway to freelance success. 
+  <p>Welcome to <b>GigStream</b> — your gateway to freelance success.
   Find projects, showcase your skills, and grow your career with ease.</p>
 </section>
 
-<!-- ===== ABOUT ===== -->
 <section id="about">
   <h2>About Us</h2>
-  <p><b>GigStream</b> connects clients with talented freelancers worldwide. 
+  <p><b>GigStream</b> connects clients with talented freelancers worldwide.
   We focus on trust, transparency, and growth for all professionals.</p>
 </section>
 
-<!-- ===== CONTACT ===== -->
 <section id="contact">
   <h2>Contact Us</h2>
   <p>Have a question or idea? Fill out the form below and we’ll get back soon.</p>
@@ -161,7 +141,6 @@ footer {
   </form>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer>
   <p>© 2025 GigStream | All Rights Reserved</p>
 </footer>
